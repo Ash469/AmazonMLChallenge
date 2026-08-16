@@ -1,0 +1,19 @@
+raw_train_path: "d:/AmazonML/dataset/train.csv"
+raw_test_path: "d:/AmazonML/dataset/test.csv"
+processed_dir: "d:/AmazonML/data/processed"
+models_dir: "d:/AmazonML/experiments"
+
+random_seed: 42
+train_split_ratio: 0.8
+
+# TF-IDF config
+word_ngram_range: [1, 2]
+word_max_features: 50000
+char_ngram_range: [3, 5]
+char_max_features: 50000
+
+# Model params
+ridge_alpha: 1.0
+lgbm_learning_rate: 0.05
+lgbm_num_leaves: 31
+lgbm_n_estimators: 100

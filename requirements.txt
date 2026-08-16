@@ -1,0 +1,11 @@
+numpy
+pandas
+scipy
+scikit-learn
+pyyaml
+joblib
+matplotlib
+lightgbm
+pytest
+ipykernel
+notebook
