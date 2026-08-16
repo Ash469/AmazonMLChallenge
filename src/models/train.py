@@ -61,12 +61,10 @@ def run_experiment(config_path: str, sample_size: int = None):
     feats_dim_val = extract_dimension_features(text_val)
     
     # TF-IDF builders (leakage-safe)
-    logger.info("Building sparse character + word TF-IDF features...")
+    logger.info("Building sparse word TF-IDF features...")
     tfidf_builder = SparseTFIDFBuilder(
         word_ngram=tuple(config['word_ngram_range']),
-        word_max_features=config['word_max_features'],
-        char_ngram=tuple(config['char_ngram_range']),
-        char_max_features=config['char_max_features']
+        word_max_features=config['word_max_features']
     )
     X_train_sparse = tfidf_builder.fit_transform(text_train)
     X_val_sparse = tfidf_builder.transform(text_val)
