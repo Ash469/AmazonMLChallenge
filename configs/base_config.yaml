@@ -1,5 +1,9 @@
 raw_train_path: "d:/AmazonML/dataset/train.csv"
 raw_test_path: "d:/AmazonML/dataset/test.csv"
+debug_train_path: "d:/AmazonML/dataset/sampled/debug/train.csv"
+debug_test_path: "d:/AmazonML/dataset/sampled/debug/test.csv"
+experiment_train_path: "d:/AmazonML/dataset/sampled/experiment/train.csv"
+experiment_test_path: "d:/AmazonML/dataset/sampled/experiment/test.csv"
 processed_dir: "d:/AmazonML/data/processed"
 models_dir: "d:/AmazonML/experiments"
 
