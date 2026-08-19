@@ -1,0 +1,53 @@
+{
+  "train_file": "../dataset/cleaned\\train_clean_debug.csv",
+  "test_file": "../dataset/cleaned\\test_clean_debug.csv",
+  "validation_size": 0.2,
+  "random_state": 42,
+  "use_log_target": true,
+  "n_estimators": 800,
+  "early_stopping_rounds": 80,
+  "features": [
+    "PRODUCT_TYPE_ID",
+    "DIM_1_CM",
+    "DIM_2_CM",
+    "DIM_3_CM",
+    "DIM_PRODUCT_2D_CM2",
+    "DIM_VOLUME_CM3",
+    "HAS_DIMENSION_2D",
+    "HAS_DIMENSION_3D",
+    "TITLE_CHAR_COUNT",
+    "TITLE_WORD_COUNT",
+    "TITLE_DIGIT_COUNT",
+    "TITLE_EMPTY",
+    "BULLET_CHAR_COUNT",
+    "BULLET_WORD_COUNT",
+    "BULLET_DIGIT_COUNT",
+    "BULLET_EMPTY",
+    "DESC_CHAR_COUNT",
+    "DESC_WORD_COUNT",
+    "DESC_DIGIT_COUNT",
+    "DESC_EMPTY",
+    "HAS_MEASUREMENT_UNIT"
+  ],
+  "results": [
+    {
+      "model": "LightGBM \u2014 Structured Features",
+      "MAPE": 58.21823670708866,
+      "MAE": 455.516110984786,
+      "RMSE": 1009.3312501141666
+    },
+    {
+      "model": "XGBoost \u2014 Structured Features",
+      "MAPE": 58.32994092535533,
+      "MAE": 457.1984627072699,
+      "RMSE": 1016.872279129539
+    },
+    {
+      "model": "CatBoost \u2014 Structured Features",
+      "MAPE": 59.775572217785054,
+      "MAE": 466.1297898310615,
+      "RMSE": 1029.8357204829167
+    }
+  ],
+  "ridge_word_tfidf_baseline_mape": 56.3653
+}

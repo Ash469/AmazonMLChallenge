@@ -9,3 +9,5 @@ lightgbm
 pytest
 ipykernel
 notebook
+torch
+transformers

@@ -16,5 +16,7 @@ dependencies = [
     "joblib",
     "matplotlib",
     "lightgbm",
-    "pytest"
+    "pytest",
+    "torch",
+    "transformers"
 ]

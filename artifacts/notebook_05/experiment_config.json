@@ -1,0 +1,83 @@
+{
+  "train_file": "../dataset/cleaned\\train_clean_debug.csv",
+  "test_file": "../dataset/cleaned\\test_clean_debug.csv",
+  "validation_size": 0.2,
+  "random_state": 42,
+  "structured_features": [
+    "PRODUCT_TYPE_ID",
+    "DIM_1_CM",
+    "DIM_2_CM",
+    "DIM_3_CM",
+    "DIM_PRODUCT_2D_CM2",
+    "DIM_VOLUME_CM3",
+    "HAS_DIMENSION_2D",
+    "HAS_DIMENSION_3D",
+    "TITLE_CHAR_COUNT",
+    "TITLE_WORD_COUNT",
+    "TITLE_DIGIT_COUNT",
+    "TITLE_EMPTY",
+    "BULLET_CHAR_COUNT",
+    "BULLET_WORD_COUNT",
+    "BULLET_DIGIT_COUNT",
+    "BULLET_EMPTY",
+    "DESC_CHAR_COUNT",
+    "DESC_WORD_COUNT",
+    "DESC_DIGIT_COUNT",
+    "DESC_EMPTY",
+    "HAS_MEASUREMENT_UNIT"
+  ],
+  "word_tfidf": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.98,
+    "max_features": 200000
+  },
+  "char_tfidf": {
+    "ngram_range": [
+      3,
+      5
+    ],
+    "min_df": 2,
+    "max_df": 0.995,
+    "max_features": 150000
+  },
+  "ridge_alpha": 10.0,
+  "lightgbm": {
+    "n_estimators": 800,
+    "learning_rate": 0.03,
+    "num_leaves": 31,
+    "min_child_samples": 30,
+    "reg_alpha": 0.1,
+    "reg_lambda": 1.0
+  },
+  "baseline_mape": 56.3653,
+  "results": [
+    {
+      "model": "Ridge \u2014 Word + Character TF-IDF + Structured",
+      "MAPE": 54.609508646781016,
+      "MAE": 452.0603826097878,
+      "RMSE": 1035.651055663988
+    },
+    {
+      "model": "LightGBM \u2014 Structured + NLP Ridge Signal",
+      "MAPE": 54.916418906680896,
+      "MAE": 427.22627180987257,
+      "RMSE": 929.1615629024351
+    },
+    {
+      "model": "Ridge + Word TF-IDF \u2014 Notebook 03",
+      "MAPE": 56.3653,
+      "MAE": NaN,
+      "RMSE": NaN
+    },
+    {
+      "model": "Ridge \u2014 Word TF-IDF + Structured",
+      "MAPE": 56.47442481896794,
+      "MAE": 467.71915757895994,
+      "RMSE": 1085.0939787063553
+    }
+  ]
+}

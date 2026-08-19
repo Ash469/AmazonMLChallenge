@@ -1,0 +1,42 @@
+{
+  "train_file": "../dataset/cleaned\\train_clean_debug.csv",
+  "test_file": "../dataset/cleaned\\test_clean_debug.csv",
+  "validation_size": 0.2,
+  "random_state": 42,
+  "use_log_target": true,
+  "word_ngram_range": [
+    1,
+    2
+  ],
+  "word_min_df": 2,
+  "word_max_df": 0.98,
+  "word_max_features": 200000,
+  "char_ngram_range": [
+    3,
+    5
+  ],
+  "char_min_df": 2,
+  "char_max_df": 0.995,
+  "char_max_features": 150000,
+  "ridge_alpha": 10.0,
+  "results": [
+    {
+      "model": "Ridge + Word + Character TF-IDF",
+      "MAPE": 54.57374496446846,
+      "MAE": 451.76890375173,
+      "RMSE": 1038.2189375401888
+    },
+    {
+      "model": "Ridge + Word TF-IDF",
+      "MAPE": 56.36533767380251,
+      "MAE": 467.93763748289666,
+      "RMSE": 1092.4554804079114
+    },
+    {
+      "model": "Ridge + Character TF-IDF",
+      "MAPE": 56.870485247481895,
+      "MAE": 469.6317019023259,
+      "RMSE": 1083.984610213788
+    }
+  ]
+}
