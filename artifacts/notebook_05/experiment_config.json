@@ -1,6 +1,6 @@
 {
-  "train_file": "../dataset/cleaned\\train_clean_debug.csv",
-  "test_file": "../dataset/cleaned\\test_clean_debug.csv",
+  "train_file": "../dataset/cleaned\\train_clean_experiment.csv",
+  "test_file": "../dataset/cleaned\\test_clean_experiment.csv",
   "validation_size": 0.2,
   "random_state": 42,
   "structured_features": [
@@ -56,28 +56,28 @@
   "baseline_mape": 56.3653,
   "results": [
     {
-      "model": "Ridge \u2014 Word + Character TF-IDF + Structured",
-      "MAPE": 54.609508646781016,
-      "MAE": 452.0603826097878,
-      "RMSE": 1035.651055663988
+      "model": "LightGBM \u2014 Structured + NLP Ridge Signal",
+      "MAPE": 49.39244576513049,
+      "MAE": 376.13880679532593,
+      "RMSE": 831.1128880428345
     },
     {
-      "model": "LightGBM \u2014 Structured + NLP Ridge Signal",
-      "MAPE": 54.916418906680896,
-      "MAE": 427.22627180987257,
-      "RMSE": 929.1615629024351
+      "model": "Ridge \u2014 Word + Character TF-IDF + Structured",
+      "MAPE": 50.173181636222864,
+      "MAE": 400.2582668309811,
+      "RMSE": 910.6504625475549
+    },
+    {
+      "model": "Ridge \u2014 Word TF-IDF + Structured",
+      "MAPE": 51.328286267236386,
+      "MAE": 412.109954501212,
+      "RMSE": 942.5926687866952
     },
     {
       "model": "Ridge + Word TF-IDF \u2014 Notebook 03",
       "MAPE": 56.3653,
       "MAE": NaN,
       "RMSE": NaN
-    },
-    {
-      "model": "Ridge \u2014 Word TF-IDF + Structured",
-      "MAPE": 56.47442481896794,
-      "MAE": 467.71915757895994,
-      "RMSE": 1085.0939787063553
     }
   ]
 }

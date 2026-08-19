@@ -1,6 +1,6 @@
 {
-  "train_file": "../dataset/cleaned\\train_clean_debug.csv",
-  "test_file": "../dataset/cleaned\\test_clean_debug.csv",
+  "train_file": "../dataset/cleaned\\train_clean_experiment.csv",
+  "test_file": "../dataset/cleaned\\test_clean_experiment.csv",
   "validation_size": 0.2,
   "random_state": 42,
   "use_log_target": true,
@@ -31,22 +31,22 @@
   ],
   "results": [
     {
-      "model": "LightGBM \u2014 Structured Features",
-      "MAPE": 58.21823670708866,
-      "MAE": 455.516110984786,
-      "RMSE": 1009.3312501141666
+      "model": "XGBoost \u2014 Structured Features",
+      "MAPE": 54.66271653875647,
+      "MAE": 416.7257689215927,
+      "RMSE": 920.2034205101734
     },
     {
-      "model": "XGBoost \u2014 Structured Features",
-      "MAPE": 58.32994092535533,
-      "MAE": 457.1984627072699,
-      "RMSE": 1016.872279129539
+      "model": "LightGBM \u2014 Structured Features",
+      "MAPE": 54.91216021493421,
+      "MAE": 419.9892540807947,
+      "RMSE": 924.9953312914466
     },
     {
       "model": "CatBoost \u2014 Structured Features",
-      "MAPE": 59.775572217785054,
-      "MAE": 466.1297898310615,
-      "RMSE": 1029.8357204829167
+      "MAPE": 56.68082362808451,
+      "MAE": 431.85717206381713,
+      "RMSE": 949.3983961903355
     }
   ],
   "ridge_word_tfidf_baseline_mape": 56.3653
